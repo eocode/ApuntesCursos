@@ -13,6 +13,9 @@
   - [Plugins Google Chrome para ReactJS](#plugins-google-chrome-para-reactjs)
   - [Herramientas para Backend](#herramientas-para-backend)
 - [¿Qué es GIT?](#%c2%bfqu%c3%a9-es-git)
+  - [Instalar Git](#instalar-git)
+  - [Comandos básicos](#comandos-b%c3%a1sicos)
+  - [Ramas, rebase y merge](#ramas-rebase-y-merge)
 
 
 # Línea de comandos
@@ -203,4 +206,55 @@ Los repositorios son una estructura de datos que almacenan información sobre ar
 
 <div align="right">
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
+## Instalar Git
+```shell
+sudo apt-get update 
+sudo apt-get install git
+git --version
+git config --global user.name "Name LastName"
+git config --global user.email "name@mail.com"
+```
+
+## Comandos básicos
+`git init` – inicaliza el repo
+`git status` – nos dice como está el repo en este momento
+`git add` – agrega archivos seleccionados para hacer commit
+`git commit` – crea (salva) un punto de referencia en la historia del repo
+`git log` - munestra ultimos commits en la historia
+
+- git se da cuenta cuando hay algun cambio en el repo.
+
+Al correr el comando `git init` nuestra terminal nos va a mostrar que nos encontramos dentro de la rama master, la rama principal de todo proyecto en Git. Además, si ejecutamos **ls -la** veremos que hay una carpeta oculta llamada **“.git”**.
+
+Todo cambio tiene varios estados dentro de Git:
+
+- Sin seguimiento
+- Sin cambios
+- Con cambios
+- En stagging
+
+Para ver el estado del repositorio ejecutamos el comando ``git status``. Podemos añadir un archivo con el comando ``git add <nombre del archivo>``, una vez lo tenemos añadido podemos dar commit con el comando git commit -m <mensaje del commit>. Con git log podemos visualizar un histórico de los commits.
+
+Dentro de Git es posible regresar entre commits con el comando ``git reset``, tenemos dos opciones para regresar:
+
+**--soft:** vamos a movernos al commit que le indiquemos, sin eliminar los commits de por medio.
+**--hard:** nos movemos al commit que indiquemos y regresamos el repositorio al estado del commit, borrando todos los commits de por medio.
+
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
+## Ramas, rebase y merge
+
+Una rama es la duplicación de un objeto sobre el repositorio y nos va a permitir trabajar en paralelo para después unir los cambios a nuestro proyecto, en este caso a nuestra rama master, los comandos principales son:
+
+``git checkout -b develop:`` según el commit en el cual ejecutemos este comando va a ser el punto en el cual se va a crear una rama idéntica, en este caso con el nombre de “develop”.
+``git merge develop:`` va a añadir los commits a la rama master.
+``git rebase develop:`` va a añadir los commits a la rama master unificando ambas ramas y conservando la historia de la misma.
+
+<div align="center">
+  <img src="img/ramas.png">
+  <small><p>Ramas</p></small>
 </div>
