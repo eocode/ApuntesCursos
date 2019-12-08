@@ -8,6 +8,9 @@
 3. [Fundamentos de Arquitectura de Software](Fundamentos%20de%20Arquitectura%20de%20Software/README.md#fundamentos-de-arquitectura-de-software)
 4. [Curso de Expresiones Regulares](Curso%20de%20Expresiones%20Regulares/README.md#Curso-de-Expresiones-Regulares) 
 
+### Escuela de JavasCript
+1. [Curso de PreWork](Curso%20de%20PreWork/README.md#%20Curso%20de%20PreWork)
+
 ### Arquitectura Frontend
 1. [Curso de Responsive Design](Curso%20de%20Responsive%20Design/README.md#curso-de-responsive-design)
 2. [Curso de Animaciones para la Web](Curso%20de%20Animaciones%20para%20la%20Web/README.md#curso-de-animaciones-para-la-web)
@@ -73,3 +76,8 @@
 
 ### Inglés
 2. [Curso de Escritura en Inglés](Curso%20de%20Escritura%20en%20Inglés/README.md#curso-de-escritura-en-inglés)
+<hr>
+##### Créditos
+<p>Me parecio fascinante como estructuro sus apuntes MineiToshio, por lo que tomo parte de su trabajo para elaborar los mios desde GitHub</p>
+<p>Comparto el enlace del proyecto original.</p>
+<a href="https://github.com/MineiToshio/CursosPlatzi" target="_blank">Estructra de cursos basado en el trabajo de MineiToshio</a>
