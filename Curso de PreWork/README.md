@@ -4,6 +4,15 @@
 - [Línea de comandos](#l%c3%adnea-de-comandos)
   - [Manejo de archivos y directorios](#manejo-de-archivos-y-directorios)
   - [LLavez SSH](#llavez-ssh)
+  - [Instalar subsistema de LINUX en WIndows](#instalar-subsistema-de-linux-en-windows)
+  - [Consola universal Hyper](#consola-universal-hyper)
+- [Instalar Zsh](#instalar-zsh)
+- [Instalar NodeJS](#instalar-nodejs)
+- [Instalar VSCode](#instalar-vscode)
+  - [NPM y NPX](#npm-y-npx)
+  - [Plugins Google Chrome para ReactJS](#plugins-google-chrome-para-reactjs)
+  - [Herramientas para Backend](#herramientas-para-backend)
+- [¿Qué es GIT?](#%c2%bfqu%c3%a9-es-git)
 
 
 # Línea de comandos
@@ -58,3 +67,101 @@ ssh-keygen -t rsa -b 4096 -C llave, puede ser tu correo>
   <img src="img/ssh.png">
   <small><p>Funcionamiento del cifrado asimétrico</p></small>
 </div>
+
+## Instalar subsistema de LINUX en WIndows
+<a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Documentación oficial</a>
+
+## Consola universal Hyper
+<a href="https://hyper.is/">Consola universal hyper</a>
+
+# Instalar Zsh
+Z shell (o simplemente zsh) es un potente intérprete de comandos para sistemas operativos de tipo Unix, como por ejemplo los BSD o GNU/Linux.1​ La primera versión de zsh fue escrita por Paul Falstad en 1990, cuando era estudiante en la Universidad de Princeton.
+
+Tiene muchas similitudes con bash y ksh e incorpora muchas de sus características principales. Algunas de sus ventajas principales incluyen una lista de autocompletar navegable. A diferencia de bash, que únicamente lista los comandos disponibles.
+
+- Eficiencia
+- Completado de tabulador mejorado
+- Expansión de nombres de fichero mejorada
+- Manejo de arrays mejorado
+- Totalmente personalizable
+
+Para instalar en windows, mediante el subsistema de windows hacer los siguiente:
+
+```shell
+sudo apt-get install zsh
+```
+
+Instalar ohmyzsh
+
+```shell
+curl -Lo install.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+sh install.sh
+```
+
+Volver consola por defecto
+
+```shell
+chsh -s /usr/bin/zsh
+```
+
+Actualizar configuración de hyper
+`notepad preferences`
+```
+  shell: 'C:\\Windows\\System32\\bash.exe',
+```
+
+# Instalar NodeJS
+La instalación de la herramienta se instala dentro del subsistema de Linux Ubuntu
+
+```shell
+curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+# Instalar VSCode
+Algunos plugins utiles para JS
+<a href="https://code.visualstudio.com/">Sitio oficial de VsCode</a>
+
+- Git Blame: va a mostrar el autor de la línea de código en la que estemos trabajando.
+- ESLint: es una herramienta de análisis de código estático para identificar patrones problemáticos encontrados en el código JavaScript, o sea, nuestro linter. Debemos instalar y configurar eslint para que siga el estilo de código que le indiquemos.
+- Color Highlight: resalta el color que estemos escribiendo.
+- SASS: es un preprocesador de CSS.
+
+Para instalar EsLint ejecutar:
+```shell
+npm install -g eslint
+```
+
+Para configurarlo
+```shell
+npx eslint --init
+```
+
+## NPM y NPX
+`NPX viene con NPM`
+- **NPM** - Administra paquetes pero no hace la vida fácil ejecutando cualquiera.
+- **NPX** - Una herramienta para ejecutar paquetes de node.
+
+NPM por sí solo no ejecuta ningún paquete. de hecho, no ejecuta ningún paquete. Si desea ejecutar un paquete utilizando NPM, debe especificar ese paquete en su archivo packages.json.
+
+Cuando los ejecutables se instalan a través de paquetes NPM, NPM los vincula con ellos:
+
+- **local** las instalaciones tienen "enlaces" creados en el directorio ./node_modules/.bin/.
+- **global** las instalaciones tienen "enlaces" creados desde el directorio global bin/ (por ejemplo, /usr/local/bin) en Linux o en %AppData%/npm en Windows.
+
+## Plugins Google Chrome para ReactJS
+<a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi">React Developer Tools</a>
+<a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi">Redux DevTools</a>
+
+## Herramientas para Backend
+
+<a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh">JSON Viewer</a>
+<a href="https://www.getpostman.com/">Postman</a>
+
+URL para probar JSONs
+http://jsonplaceholder.typicode.com/todos
+
+# ¿Qué es GIT?
+Git es un sistema de control de versiones que nos permite llevar un histórico sobre los cambios de nuestro proyecto, no es el único sistema de control de versiones, pero sí el más usado. Fue creado por **Linus Torvalds**. **Git y GitHub no son lo mismo**, uno es el sistema de control de versiones y el otro es la red social de programadores.
+
+Los repositorios son una estructura de datos que almacenan información sobre archivos y directorios. Es el inicio de todo proyecto con Git, **dentro de un repositorio encontraremos ramas**, no son más que la duplicación de un objeto bajo un repositorio, permite trabajar en paralelo para al final unir los cambios.
+
