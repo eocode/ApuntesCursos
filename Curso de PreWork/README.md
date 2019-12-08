@@ -16,6 +16,11 @@
   - [Instalar Git](#instalar-git)
   - [Comandos básicos](#comandos-b%c3%a1sicos)
   - [Ramas, rebase y merge](#ramas-rebase-y-merge)
+    - [Github: configuración, repositorio remoto, push y pull](#github-configuraci%c3%b3n-repositorio-remoto-push-y-pull)
+    - [Markdown](#markdown)
+  - [Cómo escribir un buen README](#c%c3%b3mo-escribir-un-buen-readme)
+<li>Cómo escribir un buen README*</li>
+</ul>](#ul-lic%c3%b3mo-escribir-un-buen-readmeli-ul)
 
 
 # Línea de comandos
@@ -257,4 +262,103 @@ Una rama es la duplicación de un objeto sobre el repositorio y nos va a permiti
 <div align="center">
   <img src="img/ramas.png">
   <small><p>Ramas</p></small>
+</div>
+
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
+### Github: configuración, repositorio remoto, push y pull
+- Configurar acceso ssh en github
+  - Se tiene que generar una llave publica para github
+
+Comandos:
+`git push` - Envia los cambios del repositorio a github
+`git pull` - Trae los cambios desde el repositorio
+
+### Markdown
+
+El README es el archivo en el cual hacemos la descripción del proyecto, ya sea open source o privados es importante tener un buen README. Este archivo se escribe con formato markdown, esto es lo primero que veremos en esta clase.
+
+**Markdown**
+Es un formato de escritura que permite la generación de contenido fácil y rápido, permite generar una salida (por lo general) en formato HTML sin necesidad de aprender a profundidad HTML. Es ampliamente utilizado por su facilidad de generar texto enriquecido.
+
+**Encabezados:**
+Lo utilizamos para resaltar una parte importante, títulos, subtítulos, etc. Se utiliza el símbolo # para demarcar el inicio de un encabezado.
+
+```markdown
+# Encabezado nivel 1
+## Encabezado nivel 2
+### Encabezado nivel 3
+#### Encabezado nivel 4
+##### Encabezado nivel 5
+###### Encabezado nivel 6
+```
+
+**Párrafos:**
+En formato Markdown escribirlos no es tan distinto a escribir en un texto plano, automáticamente se reconoce que es un párrafo. Basta con saltar al siguiente renglon
+
+**Itálicas y negritas**
+Hay partes en las que necesitaremos hacer énfasis en ciertas palabras, lo común es que utilicemos itálicas y negritas para resaltarlas, en Markdown debemos hacer lo siguiente:
+
+```markdown
+**Esto es una negrita**
+*Esto es una itálica*
+**_Esto es una negrita con itálica_**
+```
+
+**Citas**
+Se utilizan para mostrar referencias a otros autores, en markdown hacemos:
+
+```markdown
+> Esto es una cita
+```
+
+Podemos poner citas con varios párrafos
+
+```markdown
+> Este es el primer párrafo
+>
+> Este es el último párrafo
+```
+
+Podemos utilizar listas ordenadas y listas sin orden:
+Listas ordenadas
+
+```markdown
+1. Primer item
+2. Segundo item
+3. Tercer item
+```
+
+Listas sin orden
+
+```markdown
+- Item
+- Item
+- Item
+```
+
+**Código**
+Es esencial que en los README podamos escribir código, esto para especificar la instalación o partes que debemos resaltar de nuestro proyecto. Hay dos formas en las que podemos resaltar código, dentro de un párrafo o en una sección completa.
+
+Para insertar código lo que hacemos es dejar una tabulación y automáticamente lo reconocerá como código si no podemos utilizar ``
+
+## **Cómo escribir un buen README**
+No hay un estándar sobre cómo escribir un buen README, cada proyecto es diferente y depende de cada uno. Pero hay ciertas partes que sí o sí debería contener un buen README.
+
+**Nombre:** Especificamos cómo se llama nuestro proyecto.
+
+**Descripción:** es donde diremos para qué exactamente es el proyecto, qué problemas resuelve y cualquier información relevante.
+
+**Instalación:** muestra los pasos específicos para instalar el proyecto. Por lo general se muestra un pedazo del código necesario para la instalación.
+
+**Cómo usar:** describe rápidamente casos de uso en los cuales se puede usar el proyecto, además de mostrar funcionalidades.
+
+**Cómo contribuir:** si es un proyecto open source se describe acá la forma en la que deberían crearse las contribuciones.
+
+**Licencia:** muestra la licencia que tiene el proyecto.
+
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
