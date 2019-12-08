@@ -49,6 +49,10 @@ Vamos a ver diferentes comandos que nos serán de gran utilidad:
 **tail:** muestra las últimas 10 líneas de cada archivo, se puede modificar pasándole el parámetro con el número de líneas **-15**.
 **open:** abre un archivo con el programa que tengamos por defecto.
 
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
 ## LLavez SSH
 
 Las llaves SSH nos van a ayudar para autentificarnos con servidores. SSH utiliza criptografía asimétrica, o sea, tenemos dos llaves:
@@ -68,11 +72,23 @@ ssh-keygen -t rsa -b 4096 -C llave, puede ser tu correo>
   <small><p>Funcionamiento del cifrado asimétrico</p></small>
 </div>
 
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
 ## Instalar subsistema de LINUX en WIndows
 <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Documentación oficial</a>
 
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
 ## Consola universal Hyper
 <a href="https://hyper.is/">Consola universal hyper</a>
+
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
 
 # Instalar Zsh
 Z shell (o simplemente zsh) es un potente intérprete de comandos para sistemas operativos de tipo Unix, como por ejemplo los BSD o GNU/Linux.1​ La primera versión de zsh fue escrita por Paul Falstad en 1990, cuando era estudiante en la Universidad de Princeton.
@@ -110,6 +126,10 @@ Actualizar configuración de hyper
   shell: 'C:\\Windows\\System32\\bash.exe',
 ```
 
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
 # Instalar NodeJS
 La instalación de la herramienta se instala dentro del subsistema de Linux Ubuntu
 
@@ -136,6 +156,10 @@ Para configurarlo
 npx eslint --init
 ```
 
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
 ## NPM y NPX
 `NPX viene con NPM`
 - **NPM** - Administra paquetes pero no hace la vida fácil ejecutando cualquiera.
@@ -148,9 +172,17 @@ Cuando los ejecutables se instalan a través de paquetes NPM, NPM los vincula co
 - **local** las instalaciones tienen "enlaces" creados en el directorio ./node_modules/.bin/.
 - **global** las instalaciones tienen "enlaces" creados desde el directorio global bin/ (por ejemplo, /usr/local/bin) en Linux o en %AppData%/npm en Windows.
 
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
 ## Plugins Google Chrome para ReactJS
 <a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi">React Developer Tools</a>
 <a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi">Redux DevTools</a>
+
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
 
 ## Herramientas para Backend
 
@@ -160,8 +192,15 @@ Cuando los ejecutables se instalan a través de paquetes NPM, NPM los vincula co
 URL para probar JSONs
 http://jsonplaceholder.typicode.com/todos
 
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
 # ¿Qué es GIT?
 Git es un sistema de control de versiones que nos permite llevar un histórico sobre los cambios de nuestro proyecto, no es el único sistema de control de versiones, pero sí el más usado. Fue creado por **Linus Torvalds**. **Git y GitHub no son lo mismo**, uno es el sistema de control de versiones y el otro es la red social de programadores.
 
 Los repositorios son una estructura de datos que almacenan información sobre archivos y directorios. Es el inicio de todo proyecto con Git, **dentro de un repositorio encontraremos ramas**, no son más que la duplicación de un objeto bajo un repositorio, permite trabajar en paralelo para al final unir los cambios.
 
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
