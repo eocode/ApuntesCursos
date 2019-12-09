@@ -10,7 +10,6 @@
   - [Páginas](#p%c3%a1ginas)
   - [Generando páginas a partir de Markdown](#generando-p%c3%a1ginas-a-partir-de-markdown)
   - [Listar las publicaciones desde la página principal](#listar-las-publicaciones-desde-la-p%c3%a1gina-principal)
-  - [Conclusión](#conclusi%c3%b3n)
 
 # El framework para sitios estáticos
 
@@ -52,9 +51,7 @@ npm run develop
 
 > _Si no sabes cuál starter usar, Gatsby te permite usar [`gatsby-starter-default`](https://github.com/gatsbyjs/gatsby-starter-default), el starter más sencillo de todos._
 
-Te voy a dar un pequeño spoiler: Tu blog puede estar listo en menos de 5 minutos si usas este starter:  [`gatsby-starter-blog`](https://github.com/gatsbyjs/gatsby-starter-blog).
-
-Pero en Platzi somos la comunidad de personas más interesantes y atractivas de toda Latinoamérica, así que no solo vamos a usar un starter que tiene todo listo por nosotros, vamos a construir el blog “desde cero” (está entre comillas porque Gatsby ya hizo gran parte del trabajo por nosotros, como mínimo debemos entender muy bien cómo y por qué funciona tan bien).
+Tu blog puede estar listo en menos de 5 minutos si usas este starter:  [`gatsby-starter-blog`](https://github.com/gatsbyjs/gatsby-starter-blog).
 
 ### “A mano”
 
@@ -327,11 +324,3 @@ export default function IndexPage(props) {
   );
 }
 ```
-
-## Conclusión
-
-Esta es solo una pequeña demostración de todas las maravillosas aplicaciones que puedes construir con Gatsby.
-
-Te invito a tomar el [Curso de Desarrollo de Aplicaciones con Gatsby JS](https://platzi.com/gatsby) para entender a fondo cómo funciona cada parte de Gatsby construyendo una tienda en línea.
-
-**#NuncaParesDeAprender** :nerd_face::green_heart:
