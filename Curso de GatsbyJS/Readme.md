@@ -10,7 +10,6 @@
   - [Páginas](#p%c3%a1ginas)
   - [Generando páginas a partir de Markdown](#generando-p%c3%a1ginas-a-partir-de-markdown)
   - [Listar las publicaciones desde la página principal](#listar-las-publicaciones-desde-la-p%c3%a1gina-principal)
-  - [Conclusión](#conclusi%c3%b3n)
 
 # El framework para sitios estáticos
 
@@ -327,11 +326,3 @@ export default function IndexPage(props) {
   );
 }
 ```
-
-## Conclusión
-
-Esta es solo una pequeña demostración de todas las maravillosas aplicaciones que puedes construir con Gatsby.
-
-Te invito a tomar el [Curso de Desarrollo de Aplicaciones con Gatsby JS](https://platzi.com/gatsby) para entender a fondo cómo funciona cada parte de Gatsby construyendo una tienda en línea.
-
-**#NuncaParesDeAprender** :nerd_face::green_heart:
