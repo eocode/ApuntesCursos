@@ -8,6 +8,10 @@
 3. [Fundamentos de Arquitectura de Software](Fundamentos%20de%20Arquitectura%20de%20Software/README.md#fundamentos-de-arquitectura-de-software)
 4. [Curso de Expresiones Regulares](Curso%20de%20Expresiones%20Regulares/README.md#Curso-de-Expresiones-Regulares) 
 
+### Matemáticas
+1. [Curso de Fundamentos de Matemáticas](Curso%20de%20Fundamentos%20de%20Matemáticas/README.md)
+2. [Curso de Matemáticas Discretas](Curso%20de%20Matemáticas%20Discretas%20/README.md)
+
 ### NodeJS
 1. [Curso AdonisJS](Curso%20de%20AdonisJS/README.md#%20Curso%20de%20AdonisJS)
 2. [Curso de Gatsby](Curso%20de%20GatsbyJS/README.md#%20Curso%20de%20GatsbyJS)
