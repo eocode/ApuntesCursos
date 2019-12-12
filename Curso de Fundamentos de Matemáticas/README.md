@@ -21,10 +21,17 @@
 - [Funciones](#funciones)
   - [Tabulación de funciones](#tabulaci%c3%b3n-de-funciones)
   - [Plano Cartesiano](#plano-cartesiano)
+- [Gráficas](#gr%c3%a1ficas)
+  - [Test línea vertical](#test-l%c3%adnea-vertical)
+  - [Funciones lineales](#funciones-lineales)
+  - [Todo se puede graficar](#todo-se-puede-graficar)
+  - [Cómo identificar funciones lineales a partir de una ecuación](#c%c3%b3mo-identificar-funciones-lineales-a-partir-de-una-ecuaci%c3%b3n)
 
 # Enlaces de interés
 Reforzar las matemáticas
 https://brilliant.org/
+https://www.thatquiz.org/
+https://www.geogebra.org/graphing?lang=es
 
 # Aritmética
 Es una rama de las matemáticas que estudia los números y las operaciones que se pueden realizar con ellos. Dentro de las operaciones que podemos realizar con los números encontramos cuatro operaciones básicas:
@@ -285,3 +292,36 @@ Para el eje de ordenadas parece ser que hay dos versiones:
 - **Orthia**, que significa recto y hacia arriba.
 
 Y por último... ¿qué ocurre en tres dimensiones? Aparece un nuevo eje, llamado eje Z. Tengo que reconocer que nunca me había planteado si este eje tenía nombre o no, y resulta que se llama **eje de COTAS.**
+
+# Gráficas
+
+## Test línea vertical
+Recuerda que en una función por cada valor de x hay un valor de y. Para saber si tenemos una función o no solamente debemos realizar la prueba de línea vertical donde si un valor de x se cruza dos veces con un valor de y, entonces no es una función.
+
+<div align="center">
+  <img src="img/lineartest.png">
+  <small><p>Comprobar si es función o no</p></small>
+</div>
+
+## Funciones lineales
+Las funciones lineales las vamos a utilizar y ver de forma frecuente en nuestra vida cotidiana, estas funciones tienen la forma **y = mx donde m se llama pendiente.** La pendiente nos sirve para ver qué tan rápido crece o decrece nuestros valores de la función.
+
+Mientras más grande sea el valor de la pendiente más se va a acercar a la línea vertical, pero nunca la va a tocar. Por otro lado, si nuestra pendiente tiene un valor menor a 1 y mayor a 0, se irá acercando a la línea horizontal del plano cartesiano.
+
+<div align="center">
+  <img src="img/flineal.jpg">
+  <small><p>Funciones lineales</p></small>
+</div>
+
+## Todo se puede graficar
+Si los valores de nuestra pendiente son negativos, entonces nuestra función tendrá valores en los cuadrantes II y IV.
+
+> Hasta el momento todas nuestras funciones han pasado por el punto (0, 0),si queremos que no pasen por este punto solamente necesitamos que a nuestra función se le sume una constante. **y = mx +b**
+
+<div align="center">
+  <img src="img/graficas.jpg">
+  <small><p>Funciones lineales en todos los cuadrantes</p></small>
+</div>
+
+## Cómo identificar funciones lineales a partir de una ecuación
+Identificar si una función no es lineal a partir de su ecuación es bastante fácil, si la ecuación tiene algún exponente entonces ya no es una función lineal.
