@@ -10,12 +10,14 @@
 
 ### Matemáticas
 1. [Curso de Fundamentos de Matemáticas](Curso%20de%20Fundamentos%20de%20Matemáticas/README.md)
-2. [Curso de Matemáticas Discretas](Curso%20de%20Matemáticas%20Discretas%20/README.md)
+2. [Curso de Algebra](Curso%20de%20Algebra/README.md)
+3. [Curso de Matemáticas Discretas](Curso%20de%20Matemáticas%20Discretas%20/README.md)
 
 ### NodeJS
 1. [Curso AdonisJS](Curso%20de%20AdonisJS/README.md#%20Curso%20de%20AdonisJS)
 2. [Curso de Gatsby](Curso%20de%20GatsbyJS/README.md#%20Curso%20de%20GatsbyJS)
-
+3. [Curso de ExpressJS](Curso%20de%20ExpressJS/README.md)
+   
 ### Escuela de JavasCript
 1. [Curso de PreWork](Curso%20de%20PreWork/README.md#%20Curso%20de%20PreWork)
 
@@ -83,6 +85,7 @@
 ### Crecimiento Profesional
 1. [Curso de Escritura Online](Curso%20de%20Escritura%20Online/README.md#curso-de-escritura-online)
 2. [Curso de Hablar en Público](Curso%20de%20Hablar%20en%20Público/README.md#curso-de-hablar-en-público)
+3. [Curso de Creación de Portafolio y CV](Curso%20de%20Creacion%20de%20Portafolio%20y%20CV/README.md) 
 
 ### Inglés
 2. [Curso de Escritura en Inglés](Curso%20de%20Escritura%20en%20Inglés/README.md#curso-de-escritura-en-inglés)
