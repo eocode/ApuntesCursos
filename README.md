@@ -11,7 +11,7 @@
 ### Matemáticas
 1. [Curso de Fundamentos de Matemáticas](Curso%20de%20Fundamentos%20de%20Matemáticas/README.md)
 2. [Curso de Algebra](Curso%20de%20Algebra/README.md)
-3. [Curso de Matemáticas Discretas](Curso%20de%20Matemáticas%20Discretas%20/README.md)
+3. [Curso de Matemáticas Discretas](Curso%20de%20MD/README.md)
 
 ### NodeJS
 1. [Curso AdonisJS](Curso%20de%20AdonisJS/README.md#%20Curso%20de%20AdonisJS)
