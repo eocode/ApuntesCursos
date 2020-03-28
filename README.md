@@ -33,10 +33,6 @@
 9. [Curso de Desarrollo Web Online](Curso%20de%20Desarrollo%20Web%20Online/README.md#curso-de-desarrollo-web-online)
 10. [StoryBook for FrontEnd](Curso%20de%20StoryBook/README.md)
 
-### Desarrollo con Javascript
-<!-- 1. [Curso Avanzado de Node.js](Curso%20Avanzado%20de%20Node.js/README.md#curso-avanzado-de-nodejs) -->
-1. [Curso de jQuery a JavaScript](Curso%20de%20jQuery%20a%20JavaScript/README.md#curso-de-jquery-a-javascript)
-
 ### Desarrollo con React
 1. [Curso de React.js](Curso%20de%20React.js/README.md#curso-de-reactjs)
 2. [Curso de Redux](Curso%20de%20Redux/README.md#curso-de-redux)
@@ -51,12 +47,8 @@
 ### Base de Datos
 1. [Curso de MongoDB y Redis](Curso%20de%20MongoDB%20y%20Redis/README.md#curso-de-mongodb-y-redis)
 
-### Firebase
-1. [Curso de Firebase para Web](Curso%20de%20Firebase%20para%20Web/README.md#curso-de-firebase-para-web)
-
 ### Administración de Servidores y Devops
 1. [Curso de Deploy con Now.sh](Curso%20de%20Deploy%20con%20Now.sh/README.md#curso-de-deploy-con-nowsh)
-2. [Curso de Azure IaaS](Curso%20de%20Azure%20IaaS/README.md#curso-de-azure-iaas)
 
 ### Diseño de Productos Digitales y UX
 1. [Curso de Design Sprint](Curso%20de%20Design%20Sprint/README.md#curso-de-design-sprint)
@@ -64,12 +56,6 @@
 ### Blockchain y Criptomonedas
 1. [Curso de Bitcoin y Blockchain](Curso%20de%20Bitcoin%20y%20Blockchain/README.md#curso-de-bitcoin-y-blockchain)
 2. [Curso de Inversión en Criptomonedas](Curso%20de%20Inversión%20en%20Criptomonedas/README.md#curso-de-inversión-en-criptomonedas)
-
-### Outbound Marketing
-1. [Curso de Relaciones Públicas y Prensa](Curso%20de%20Relaciones%20Públicas%20y%20Prensa/README.md#curso-de-relaciones-públicas-y-prensa)
-
-### Email Marketing
-1. [Curso de Email Marketing](Curso%20de%20Email%20Marketing/README.md#curso-de-email-marketing)
 
 ### Negocios Online
 1. [Curso de Atención al Cliente y Soporte a Usuarios](Curso%20de%20Atención%20al%20Cliente%20y%20Soporte%20a%20Usuarios/README.md#curso-de-atención-al-cliente-y-soporte-a-usuarios)
@@ -87,8 +73,7 @@
 2. [Curso de Hablar en Público](Curso%20de%20Hablar%20en%20Público/README.md#curso-de-hablar-en-público)
 3. [Curso de Creación de Portafolio y CV](Curso%20de%20Creacion%20de%20Portafolio%20y%20CV/README.md) 
 
-### Inglés
-2. [Curso de Escritura en Inglés](Curso%20de%20Escritura%20en%20Inglés/README.md#curso-de-escritura-en-inglés)
+
 <hr>
 ##### Créditos
 <p>Me parecio fascinante como estructuro sus apuntes MineiToshio, por lo que tomo parte de su trabajo para elaborar los mios desde GitHub</p>
