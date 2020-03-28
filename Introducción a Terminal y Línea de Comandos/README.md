@@ -1,50 +1,57 @@
 # Introducción a Terminal y Línea de Comandos<!-- omit in toc -->
 
 ## Tabla de Contenido<!-- omit in toc -->
-- [Introducción](#introducción)
-- [Comandos](#comandos)
-- [Lista de comandos](#lista-de-comandos)
-  - [Listar](#listar)
-  - [Ver directorio actual](#ver-directorio-actual)
-  - [Cambiar de directorio](#cambiar-de-directorio)
-  - [Crear una carpeta](#crear-una-carpeta)
-  - [Crear archivos](#crear-archivos)
-  - [Mover un archivo](#mover-un-archivo)
-  - [Cambiar de nombre a un archivo](#cambiar-de-nombre-a-un-archivo)
-  - [Eliminar archivos](#eliminar-archivos)
-  - [Ayuda](#ayuda)
-  - [Copiar](#copiar)
-  - [Navegar entre 2 directorios](#navegar-entre-2-directorios)
-  - [Abrir un archivo](#abrir-un-archivo)
-  - [Ver las primeras líneas de un archivo](#ver-las-primeras-líneas-de-un-archivo)
-  - [Imprimir todo el contenido de un archivo](#imprimir-todo-el-contenido-de-un-archivo)
-  - [Ver las últimas líneas de un archivo](#ver-las-últimas-líneas-de-un-archivo)
-  - [Ver ruta ejecutable de un comando](#ver-ruta-ejecutable-de-un-comando)
-  - [Alias para comandos](#alias-para-comandos)
-  - [Ver los procesos que están corriendo](#ver-los-procesos-que-están-corriendo)
-  - [Matar procesos](#matar-procesos)
-  - [Ejecutar en 2do plano (background)](#ejecutar-en-2do-plano-background)
-  - [Ejecutar varios procesos](#ejecutar-varios-procesos)
-  - [Mostrar cantidad de procesos](#mostrar-cantidad-de-procesos)
-  - [Tiempo de prendida de la computadora](#tiempo-de-prendida-de-la-computadora)
-  - [Uso del disco](#uso-del-disco)
-  - [Links](#links)
-  - [Nombre de usuario](#nombre-de-usuario)
+- [Administración de procesos en backgroun y foreground](#administraci%c3%b3n-de-procesos-en-backgroun-y-foreground)
+  - [Lista de comandos](#lista-de-comandos)
+    - [Listar](#listar)
+    - [Ver directorio actual](#ver-directorio-actual)
+    - [Cambiar de directorio](#cambiar-de-directorio)
+    - [Crear una carpeta](#crear-una-carpeta)
+    - [Crear archivos](#crear-archivos)
+    - [Mover un archivo](#mover-un-archivo)
+    - [Cambiar de nombre a un archivo](#cambiar-de-nombre-a-un-archivo)
+    - [Eliminar archivos](#eliminar-archivos)
+    - [Ayuda](#ayuda)
+    - [Copiar](#copiar)
+    - [Navegar entre 2 directorios](#navegar-entre-2-directorios)
+    - [Abrir un archivo](#abrir-un-archivo)
+    - [Ver las primeras líneas de un archivo](#ver-las-primeras-l%c3%adneas-de-un-archivo)
+    - [Imprimir todo el contenido de un archivo](#imprimir-todo-el-contenido-de-un-archivo)
+    - [Ver las últimas líneas de un archivo](#ver-las-%c3%baltimas-l%c3%adneas-de-un-archivo)
+    - [Ver ruta ejecutable de un comando](#ver-ruta-ejecutable-de-un-comando)
+    - [Alias para comandos](#alias-para-comandos)
+    - [Ver los procesos que están corriendo](#ver-los-procesos-que-est%c3%a1n-corriendo)
+    - [Matar procesos](#matar-procesos)
+    - [Ejecutar en 2do plano (background)](#ejecutar-en-2do-plano-background)
+    - [Ejecutar varios procesos](#ejecutar-varios-procesos)
+    - [Mostrar cantidad de procesos](#mostrar-cantidad-de-procesos)
+    - [Tiempo de prendida de la computadora](#tiempo-de-prendida-de-la-computadora)
+    - [Uso del disco](#uso-del-disco)
+    - [Links](#links)
+    - [Nombre de usuario](#nombre-de-usuario)
 - [Streams](#streams)
 - [Power Tools](#power-tools)
   - [Buscar cadenas de caracteres](#buscar-cadenas-de-caracteres)
   - [Buscar archivos](#buscar-archivos)
   - [Fecha actual](#fecha-actual)
   - [Tiempo del procesador](#tiempo-del-procesador)
-  - [Tiempo de ejecución de un proceso](#tiempo-de-ejecución-de-un-proceso)
-  - [Emular un navegador](#emular-un-navegador)
-  - [Comprimir archivos](#comprimir-archivos)
-- [Pipe](#pipe)
-- [Crontab](#crontab)
-- [Permisos](#permisos)
-  - [Ejecutar como super user](#ejecutar-como-super-user)
+    - [Tiempo de ejecución de un proceso](#tiempo-de-ejecuci%c3%b3n-de-un-proceso)
+    - [Emular un navegador](#emular-un-navegador)
+    - [Comprimir archivos](#comprimir-archivos)
+  - [Pipe](#pipe)
+  - [Crontab](#crontab)
+- [Control de accesos y usuarios](#control-de-accesos-y-usuarios)
+  - [Permisos](#permisos)
+    - [Ejecutar como super user](#ejecutar-como-super-user)
 - [Convertir archivos a ejecutable](#convertir-archivos-a-ejecutable)
-- [Enlaces de Interés](#enlaces-de-interés)
+- [Compresión de archivos](#compresi%c3%b3n-de-archivos)
+- [Búsqueda de archivos](#b%c3%basqueda-de-archivos)
+- [Interacción por HTTP](#interacci%c3%b3n-por-http)
+- [Acceso seguro a otras computadoras](#acceso-seguro-a-otras-computadoras)
+  - [Manejo de paquetes](#manejo-de-paquetes)
+- [Automatización de tareas](#automatizaci%c3%b3n-de-tareas)
+  - [Programar tareas](#programar-tareas)
+- [Power Shell](#power-shell)
 
 ## Introducción
 
@@ -60,6 +67,9 @@ Todos los comandos se pueden buscar con el comando `man`.
 
 * `Ahorras memoria` puesto que no hay una interfaz gráfica
 * `Ahorras tiempo` pues hace más sentillo el trabajo.
+
+**¿Qué es bash?**
+GNU Bash o simplemente Bash es un lenguaje de comandos y shell de Unix escrito por Brian Fox para el Proyecto GNU como un reemplazo de software libre para el shell Bourne.​ ​
 
 <div align="right">
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
@@ -85,6 +95,336 @@ Los `flags` (o banderas) sirven para decirle al comando cómo queremos que reali
 <div align="right">
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
+
+### Variables de entorno
+
+Para el comando
+`echo hola`
+
+Si ejecutamos
+
+`whereis echo`
+
+Nos da como resultado su dirección donde está ubicado
+
+`echo: /bin/echo /usr/share/man/man1/echo.1.gz`
+
+Pero para poder usarlo en cualquier parte y no tener que escribir toda la ruta, todo se guarda en el PATH
+
+`echo $PATH`
+
+Para ver algunos de los comandos mapeados
+
+`ls /usr/bin/ -l | more`
+
+Para asignar usamos
+
+`export myvar = valor`
+
+`echo $myvar`
+
+## Sistema de archivos
+
+## Organización de información
+* Archivos
+* Directorios
+
+Existen jerarquias entre cada uno de los directorios
+
+### Comandos para trabajar desde nuestra ubicación
+
+Lista los archivos que se encuentran en el directorio sobre el que estamos trabajando:
+
+```shell
+ls
+```
+
+Lista todos los archivos incluyendo aquellos que se han definido como ocultos:
+
+```shell
+ls -a
+```
+
+Todos los directorios contienen los archivos . y .., estos son punteros a directorios.
+
+>.. --> directorio padre
+>. --> directorio actual
+
+Otros parámetros que puedes usar con el comando ls:
+
+Ordena los archivos por fecha de modificación:
+
+```shell
+ls -t
+```
+
+Ordena los archivos por extensión:
+
+```shell
+ls -x
+```
+
+Muestra toda la información: usuario, grupo, permisos, tamaño, fecha y hora de creación.
+
+```shell
+ls -l
+```
+
+Muestra la misma información que ls -l pero con las unidades de tamaño en KB, MB:
+
+```shell
+ls -lh
+```
+
+Muestra el contenido de todos los subdirectorios de forma recursiva:
+
+```shell
+ls -R
+```
+
+Ordena los resultados por tamaño de archivo:
+ 
+```shell
+ls -S
+```
+
+### Comandos para cambiar de ubicación
+
+Print Working Directory: se usa para mostrar el directorio actual en el que nos encontramos trabajando.
+
+```shell
+pwd
+```
+
+cd: se utiliza para cambiar de directorio. Luego del comando se debe especificar la ruta del directorio al que nos queremos mover. Por ejemplo:
+
+```shell
+cd /home/mi_usuario
+```
+
+### Comandos para mover, copiar o borrar
+
+cp: copiar un archivo hacia un directorio.
+
+```shell
+cp [archivo que se va a copiar] [directorio hacia el que se va a mover]
+```
+
+rm: eliminar un archivo.
+
+```shell
+rm archivo.txt
+```
+
+`mv``: mover un archivo, cambiar su ubicación. La sintaxis es así:
+
+```shell
+mv [ruta del archivo] [directorio hacia el que se va a mover]
+```
+
+rmdir: eliminar un directorio. En este caso es importante resaltar que, para que el directorio pueda ser eliminado, no puede contener archivos u otros directorios en su interior.
+
+```shell
+rmdir [ruta / nombre del directorio a eliminar]
+```
+
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
+
+## Archivos de texto y utilidades interactivas
+
+Un archivo de texto se compone por caracteres y es legible por humanos. Para poder leerlos tenemos dos opciones principales
+
+* **VIM**
+  * `vim archivo.txt`
+  * Difícil empezar a trabajar con y maestro. La edición de comandos y modos de confundir a los principiantes.
+  * Sesión de recuperación
+  * Pantalla dividida
+  * Ficha de expansión
+  * Finalización de comandos
+  * El coloreado de la sintaxis
+* **Nano**
+  * `nano archivo.txt`
+  * Fácil de usar y dominar.
+  * Nano tiene la mayoría de las combinaciones de teclas que aparecen en la parte inferior de la ventana, por lo que es extremadamente simple de usar.
+  * Función de búsqueda
+  * Buscar y reemplazar
+  * "Ir a la línea de comandos"
+  * Sangría automática
+
+### Primeros pasos en VIM
+
+Dentro de nano el interprete de comandos se activa con ESC y permite las siguientes acciones:
+
+* `:i` permite activar el modo de insersión
+* `:w` guarda el contenido
+* `:q` sale del editor
+* `:wq` guarda y sale
+* `:q!` sale sin guardar 
+
+## Utilidades batch y batch avanzadas
+
+Son programas que procesan texto y emiten el resultado
+
+### Trabajo fundamental con archivos de texto
+
+touch: nos permite crear archivos.
+
+```bash
+touch archivo.txt
+```
+
+cat: nos permite visualizar todo el contenido de nuestros archivos.
+
+```bash
+cat archivo.txt
+```
+
+head: es muy parecido al comando cat. También nos permite visualizar el contenido de nuestros archivos, pero debemos indicarle cuántas líneas nos debe mostrar. Por defecto nos mostrará las primeras 10.
+
+Primeras 10 líneas
+```bash
+head archivo.txt
+```
+
+Primeras 20 líneas
+
+```bash
+head -n 20 archivo.txt
+```
+
+tail: funciona igual que el comando head, pero al revés. También debemos indicarle cuántas líneas nos debe mostrar, la diferencia es que no las mostrará de abajo hacia arriba. Por defecto nos mostrará las últimas 10.
+
+```bash
+tail archivo.txt
+```
+
+Últimas 5 líneas
+```bash
+tail -n 5 archivo.txt
+```
+
+### Búsqueda y tratamiento de texto
+
+El comando grep permite filtrar las líneas que queremos visualizar utilizando (o no) expresiones regulares:
+
+```shell
+grep “palabra-clave” archivo_gigante.txt
+```
+
+Si nos da igual si la palabra clave incluye mayúsculas o minúsculas podemos utilizar el flag -i:
+
+```shell
+grep -i “pAlaBra-cLAvE” archivo_gigante.txt
+```
+
+También podemos verificar si la línea incluye esta palabra clave al final:
+
+```bash
+grep “palabra-clave$” archivo_gigante.txt
+```
+
+O si la incluye al principio:
+
+```bash
+grep “^palabra-clave” archivo_gigante.txt
+```
+
+También hay situaciones donde necesitamos modificar un poco la información que obtenemos de un archivo de texto.
+
+Por ejemplo, imagina que nuestro archivo contiene un poema, frase o saludo para responderle a los usuarios de nuestra aplicación. El problema es que cada usuario tiene un nombre diferente.
+
+> ¡Hola, NOMBRE_USUARIO! Felicitaciones por completar tu desafío con PUNTOS_USUARIO puntos.
+
+No queremos editar este archivo. Solo necesitamos cambiar los caracteres NOMBRE_USUARIO por el verdadero nombre del usuario.
+
+Para esto podemos utilizar el comando ``sed``. 
+
+Solo debemos indicarle que queremos realizar una sustitución (s/), la palabra que vamos a cambiar (NOMBRE_USUARIO), la nueva palabra que vamos a incluir (Ana) y cerrar con el símbolo /.
+
+```shell
+sed ‘s/NOMBRE_USUARIO/Ana’ archivo-saludo.txt
+```
+
+Ahora imagina que, además del nombre, debemos cambiar también la puntuación que obtuvo el usuario:
+
+```shell
+sed ‘s/NOMBRE_USUARIO/Ana/; s/PUNTOS_USUARIO/35/’ archivo-saludo.txt
+```
+
+Más usos de Sed: https://likegeeks.com/es/sed-de-linux/
+
+Para tratar texto delimitado existe el comando `awk`
+
+```shell
+Awk -F ['delimitador;'] '{print$1}'# Sirve para tabajar con archivos estructurados ejemplo .csv, este ejemplo trae la primera columna
+```
+
+## Procesamiento de datos
+
+Sigue el flujo estándar
+
+* Entrada
+* Procesamiento
+* Salida
+* Error
+
+Los datos pueden venir de un teclado o de un archivo que ya tenemos
+
+Los datos pueden enviarse en lugar de a una pantalla a un archivo
+
+Encadenamiento de procesos
+
+* Un ``pipe`` o ``tuberia``
+
+Podemos concatenar dos o más comandos entre sí
+
+```bash
+cat archivo.txt | wc -l
+```
+
+Para el siguiente archivo `index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+
+Ejecutaremos lo siguiente:
+
+```bash
+cat index.html | wc -l
+head -n 15 index.html > index2.html | tail -n 15 index.html > index3.html | date >> index.html
+```
+
+# Administración de procesos en backgroun y foreground
+
+Todos los comandos son procesos
+
+* ``&`` => al final de un comando nos permite seguir trabajando mientras un proceso se ejecuta.
+* ``ctrl + z`` => Me permite poner un proceso en background y poder seguir utilizando la linea de comandos.
+* ``fg`` => Me permite poder volver a ese proceso.
+Herramientas:
+* ``ps`` => Me permite ver los procesos que se estan ejecutando.
+* ``top`` => Me permite ver en tiempo real como los procesos van cambiando.
+
+Como detener procesos:
+* ``ctrl + c`` = nos permite terminar un programa en ejecucion en la consola.
+* ``ps`` ax => nos permite ver los procesos y con el numero de id del procesos lo podemos eliminar.
+
+Para eliminarlos por el id del proceso:
+* ``kill`` => elimina el proceso por el id. kill -9 elimina el procesos inmediatamente.
+* ``killall`` => elmina el proceso por el nombre del ejecutable.
 
 ## Lista de comandos
 
@@ -430,7 +770,7 @@ Te dice cual es el usuario que esta operando
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
 
-## Streams
+# Streams
 
 Los streams son una forma de enviar datos a un comando y recibir un output de salida.
 
@@ -472,9 +812,9 @@ El error y el output aparecen en el mismo archivo
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
 
-## Power Tools
+# Power Tools
 
-### Buscar cadenas de caracteres
+## Buscar cadenas de caracteres
 
 `grep -r [ruta] -e [expresion]` nos ayuda a encontrar cadenas de caracteres dentro de todos los archivos de la ruta que le demos, con expresiones regulares.
 * -r: que sea recursivo
@@ -487,7 +827,7 @@ El error y el output aparecen en el mismo archivo
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
 
-### Buscar archivos
+## Buscar archivos
 
 `find [ruta] -name [nombre]` busca en base al nombre y la metadata dentro del directorio que le digamos.
 * -name: el nombre del archivo (*.js devuelve todos los archivos que terminan con .js)
@@ -497,13 +837,13 @@ El error y el output aparecen en el mismo archivo
 según criterio de búsqueda y los copia o mueve todos a un directorio indicado.
 * -acción: puede ser `mv` para mover o `cp` para copiar
 
-### `Nota:` colocar el atributo -type f para seleccionar solo los archivos y colocar \; para terminar el comando.
+> `Nota:` colocar el atributo -type f para seleccionar solo los archivos y colocar \; para terminar el comando.
 
 <div align="right">
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
 
-### Fecha actual
+## Fecha actual
 
 `date`
 
@@ -513,7 +853,7 @@ Muestra la fecha actual.
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
 
-### Tiempo del procesador
+## Tiempo del procesador
 
 `time` 
 
@@ -636,6 +976,47 @@ Ejecuta script.sh:
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
 
+# Control de accesos y usuarios
+
+Usurios
+* Dueño
+* Grupo
+* Otros
+
+Operaciones
+* Leer
+* Escribir
+* Ejecutar
+
+Cumple la siguiente matriz
+
+<table>
+  <tr>
+    <td></td>
+    <td>Lectura</td>
+    <td>Escritura</td>
+    <td>Ejecución</td>
+  </tr>
+  <tr>
+    <td>Dueño</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Grupo</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Otros</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
 ## Permisos
 
 Podemos ver los permisos que tiene un archivo con `ls -l`.
@@ -687,6 +1068,13 @@ Para asignar los permisos se debe de dar el número tanto para el owner, el grup
 750: rwxr-x---`
 ```
 
+Quitar permisos
+
+`chmod o-w nuevo.txt`
+
+Agrega permiso para ejecutar
+`chmod +x nuevo.txt`
+
 **Cambiar permisos**
 
 `chmod [numero] [archivo]` 
@@ -696,6 +1084,12 @@ Permite cambiar los permisos a un archivo.
 ```bash
 $ chmod 750 archivo.txt
 ```
+
+Comandos importantes
+
+* **chmod** - Cambiar individualmente los permisos
+* **chown** - cambiar propietario del archivo
+* **chgrop** - cambiar gurpo al que pertenece un archivo
 
 <div align="right">
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
@@ -711,7 +1105,7 @@ Ejecuta un comando como super usuario.
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
 
-## Convertir archivos a ejecutable
+# Convertir archivos a ejecutable
 
 `#! [ruta del ejecutable]` 
 
@@ -733,9 +1127,118 @@ De este modo cuando ejecutamos `ejemplo.php` se ejecuta automáticamente y ya no
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
 
-## Enlaces de Interés
-* [Introducción a Terminal y Línea de Comandos](https://platzi.com/clases/terminal/)
+# Compresión de archivos
+
+Comprimir
+`gzip archivo.txt`
+
+Descomprimir
+`gzip -d archivo.txt`
+
+Combinación de archivos
+`tar cf backup.tar backup/*`
+
+Ver contenido
+`tar tf backup.tar`
+
+Desagrupar
+`tar xf backup.tar`
+
+# Búsqueda de archivos
+
+locate. Búscar en todo el sistema de archivos con sólo el nombre
+
+
+```bash
+sudo updatedb
+locate hello.php
+```
+
+whereis. Ubica comandos
+
+`whereis echo`
+
+find. Búsca dentro de un arbol de directorio con una serie de criterios
+
+`find . -user mauro -perm 644`
+`find . -type f -mtime +7 -exec cp {} ./backup/ \`
+
+# Interacción por HTTP
+
+curl.- Hace pedidos crudos
+
+`curl https://google.com`
+
+Datos crudos
+`curl -v https://platzi.com | more`
+
+`curl -v https://platzi.com > dev/null`
+
+wget.- Realiza descargas desde servidores HTTP
+
+wget https://www.php.net/distributions/php-7.3.10.tar.bz2
+
+# Acceso seguro a otras computadoras
+
+## Manejo de paquetes
+Exiten los siguientes según la distribución que se este usando
+
+* apt
+* zypper
+* rpm
+
+Para instalar paguetes:
+`apt install lynx`
+
+El paquete anterior permite ver sitios en modo texto
 
 <div align="right">
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
+
+# Automatización de tareas
+
+Bash es un lenguajes de programación y permite automatizar tareas con comandos
+
+Los scripts se deben guardar con extensión .sh
+
+```bash
+#!/bin/bash
+NEW_DIR=midir
+
+if [ ! -d"~/$NEW_DIR" ]; then
+        mkdir ~/$NEW_DIR
+fi
+
+cp ejemplo.txt ~/$NEW_DIR/
+echo"Todo bien Jefe"``
+```
+
+Algunos scripts se ejecutan al iniciar el sistema
+
+`cat /etc/enviroment`
+
+Crea el archivo y agregar algo al PATH
+`nano .bashrc`
+Ejecuta
+`source .bashrc`
+Para ver
+`echo $PATH`
+
+## Programar tareas
+
+at programa tareas con temporalizador
+`date`
+`at now +2 minutes`
+`>at echo "Hola  mundo" > /home/eocode/hola.txt`
+`date ; ls hola.txt`
+
+cron
+
+`crontab -e`
+
+# Power Shell
+
+Para usar power shell puedes usar lo siguiente:
+
+https://esgeeks.com/como-usar-windows-powershell-guia-basica/
