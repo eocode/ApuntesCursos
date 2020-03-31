@@ -1,6 +1,6 @@
 -- GROUP BY
 SELECT	estatus, COUNT(*) AS post_number
-FROM		posts
+FROM	posts
 GROUP BY estatus;
 
 SELECT	YEAR(fecha_publicacion) AS post_year, COUNT(*) AS post_number

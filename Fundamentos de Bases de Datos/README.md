@@ -18,6 +18,10 @@
     - [DML](#dml)
     - [¿Qué tan Standard es SQL?](#%c2%bfqu%c3%a9-tan-standard-es-sql)
     - [Consultas a una base de datos](#consultas-a-una-base-de-datos)
+    - [De una pregunta a un Query](#de-una-pregunta-a-un-query)
+- [Bases de datos no relacionales](#bases-de-datos-no-relacionales)
+  - [Firestore (Base de datos documental)](#firestore-base-de-datos-documental)
+    - [Reglas](#reglas-1)
 
 # Bases de datos relacionales
 
@@ -59,8 +63,8 @@ cuando los datos existentes se redistribuyen en el sistema.
   * Se escriben en plural
     * Entidades fuertes: No dependen de ninguna otra entidad para existir.
     * Entidades débiles: No pueden existir sin una entidad fuerte. Se representan con un cuadrado de doble línea.
-    * Débiles identidad:No se diferencien entre sí más que por la clave.
-    * Débiles por existencia: Significa que aunque agregues un ID propio a esta entidad, si por contexto depende de una entidad fuerte, es débil por existencia.
+      * Débiles identidad:No se diferencien entre sí más que por la clave.
+      * Débiles por existencia: Significa que aunque agregues un ID propio a esta entidad, si por contexto depende de una entidad fuerte, es débil por existencia.
 
 Por ejemplo libros(fuerte) y ejemplares (debíl)
 
@@ -222,3 +226,54 @@ Los usos se podrían dar en varias especialidades como:
   <img src="img/sqljoin.jpg">
   <small><p>Teoría de conjuntos</p></small>
 </div>
+
+### De una pregunta a un Query
+* Lo que quieres mostrar = SELECT
+* De dónde voy a tomar los datos = FROM
+* Los filtros de los datos que quieres mostrar = WHERE
+* Los rubros por los que me interesa agrupar = GROUP BY
+* El orden en que quiero presentar la información = ORDER BY
+* Los filtros que quiero que mis datos agrupados  = HAVING
+
+Funciones con group
+
+* GROUP_CONCAT MySQL
+* string_agg(DISTINCT t.name, ',') PostgreSQL
+
+
+# Bases de datos no relacionales
+
+Respecto a las bases de datos no relacionales, no existe un solo tipo aunque se engloben en una sola categoría.
+
+Tipos de bases de datos no relacionales:
+
+* **Clave - valor:** Son ideales para almacenar y extraer datos con una clave única. Manejan los diccionarios de manera excepcional. Ejemplos: DynamoDB, Cassandra.
+* **Basadas en documentos:** Son una implementación de clave valor que varía en la forma semiestructurada en que se trata la información. Ideal para almacenar datos JSON y XML. Ejemplos: MongoDB, Firestore.
+* **Basadas en grafos:** Basadas en teoría de grafos, sirven para entidades que se encuentran interconectadas por múltiples relaciones. Ideales para almacenar relaciones complejas. Ejemplos: neo4j, TITAN.
+* **En memoria:** Pueden ser de estructura variada, pero su ventaja radica en la velocidad, ya que al vivir en memoria la extracción de datos es casi inmediata. Ejemplos: Memcached, Redis.
+* **Optimizadas para búsquedas:** Pueden ser de diversas estructuras, su ventaja radica en que se pueden hacer queries y búsquedas complejas de manera sencilla. Ejemplos: BigQuery, Elasticsearch.
+
+## Firestore (Base de datos documental)
+
+Una base de datos como FireStore es útil para guardar el estado, pero no es recomendable para hacer consultas complejas
+
+https://console.firebase.google.com/project/platziblog-8cedd/database?hl=es
+
+<div align="center">
+  <img src="img/DF3.png">
+  <small><p>Diagrama</p></small>
+</div>
+
+**Diferencias**
+
+* Tablas -> colecciones
+* Tuplas -> Documentos
+
+Dentro de las colecciones existen dos grupos:1
+* Top level collection o colecciones de nivel superior
+* Subcolecciones que van dentro de un documento padre
+
+### Reglas
+
+* Piensa en la vista de tu aplicación: la estructura de base de datos debe ser un espejo que al menos contenga los datos necesarios para llenar las necesidades de la parte visual de la aplicación
+* La colección tine vida propia: Se refiere cuando tenemos un caso en que la entidad que tiene necesidad de vivir y modificarse constantemente independiente a las otra colecciones
