@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS pruebaplatzi;
+DROP DATABASE IF EXISTS bookstore;
 
-CREATE DATABASE pruebaplatzi;
-USE pruebaplatzi;
+CREATE DATABASE bookstore;
+USE bookstore;
 
 CREATE TABLE `authors` (
   `author_id` int(10) unsigned NOT NULL AUTO_INCREMENT,

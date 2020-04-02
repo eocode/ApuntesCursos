@@ -8,6 +8,10 @@
       - [Motores de almacenamiento](#motores-de-almacenamiento)
 - [Proyecto  MySQL](#proyecto-mysql)
       - [Comandos](#comandos)
+        - [JOINS](#joins)
+- [Casos de negocio](#casos-de-negocio)
+- [UPDATE - DELETE](#update---delete)
+- [Backup](#backup)
 - [Bases de datos para BigData](#bases-de-datos-para-bigdata)
 
 # Introducción
@@ -118,6 +122,127 @@ Diciendole la base de datos
 
 Selección de datos
 `select.sql`
+
+##### JOINS
+
+1. **Inner Join**
+Esta es la forma mas fácil de seleccionar información de diferentes tablas, es tal vez la que mas usas a diario en tu trabajo con bases de datos. Esta union retorna todas las filas de la tabla A que coinciden en la tabla B. Es decir aquellas que están en la tabla A Y en la tabla B, si lo vemos en conjuntos la intersección entre la tabla A y la B.
+
+Esto lo podemos implementar de esta forma cuando estemos escribiendo las consultas:
+
+```sql 
+SELECT <columna_1> , <columna_2>,  <columna_3> ... <columna_n> 
+FROM Tabla_A A
+INNER JOIN Tabla_B B
+ON A.pk = B.pk
+```
+
+2. **Left Join**
+Esta consulta retorna todas las filas que están en la tabla A y ademas si hay coincidencias de filas en la tabla B también va a traer esas filas.
+
+Esto lo podemos implementar de esta forma cuando estemos escribiendo las consultas:
+
+```sql
+SELECT <columna_1> , <columna_2>,  <columna_3> ... <columna_n> 
+FROM Tabla_A A
+LEFT JOIN Tabla_B B
+ON A.pk = B.pk
+```
+
+3. **Right Join**
+Esta consulta retorna todas las filas de la tabla B y ademas si hay filas en la tabla A que coinciden también va a traer estas filas de la tabla A.
+
+Esto lo podemos implementar de esta forma cuando estemos escribiendo las consultas:
+
+```sql
+SELECT <columna_1> , <columna_2>,  <columna_3> ... <columna_n>
+FROM Tabla_A A
+RIGHT JOIN Tabla_B B
+ON A.pk = B.pk
+```
+
+4. **Outer Join**
+Este join retorna TODAS las filas de las dos tablas. Hace la union entre las filas que coinciden entre la tabla A y la tabla B.
+
+Esto lo podemos implementar de esta forma cuando estemos escribiendo las consultas:
+
+```sql
+SELECT <columna_1> , <columna_2>,  <columna_3> ... <columna_n>
+FROM Tabla_A A
+FULL OUTER JOIN Tabla_B B
+ON A.pk = B.pk
+```
+
+5. **Left excluding join**
+Esta consulta retorna todas las filas de la tabla de la izquierda, es decir la tabla A que no tienen ninguna coincidencia con la tabla de la derecha, es decir la tabla B.
+
+Esto lo podemos implementar de esta forma cuando estemos escribiendo las consultas:
+
+```sql
+SELECT <columna_1> , <columna_2>,  <columna_3> ... <columna_n>
+FROM Tabla_A A
+LEFT JOIN Tabla_B B
+ON A.pk = B.pk
+WHERE B.pk IS NULL
+```
+
+6. **Right Excluding join**
+Esta consulta retorna todas las filas de la tabla de la derecha, es decir la tabla B que no tienen coincidencias en la tabla de la izquierda, es decir la tabla A.
+
+Esto lo podemos implementar de esta forma cuando estemos escribiendo las consultas:
+
+```sql
+SELECT <columna_1> , <columna_2>,  <columna_3> ... <columna_n>
+FROM Tabla_A A
+RIGHT JOIN Tabla_B B
+ON A.pk = B.pk
+WHERE A.pk IS NULL
+```
+
+7. **Outer excluding join**
+Esta consulta retorna todas las filas de la tabla de la izquierda, tabla A, y todas las filas de la tabla de la derecha, tabla B que no coinciden.
+
+Esto lo podemos implementar de esta forma cuando estemos escribiendo las consultas:
+
+```sql
+SELECT <select_list>
+FROM Table_A A
+FULL OUTER JOIN Table_B B
+ON A.Key = B.Key
+WHERE A.Key IS NULL OR B.Key IS NULL
+```
+
+# Casos de negocio
+
+`negocio.sql`
+
+# UPDATE - DELETE
+
+`update_delete.sql`
+
+`powerqueries.sql`
+
+# Backup
+
+Saca un Backup de tus respaldos
+
+Ver el esquema
+
+```sql
+mysqldump -u root -p mypass
+```
+
+Paginar resultado
+
+```sql.
+mysqldump -u root -p mypass | more
+```
+
+Guardar en un archivo el esquema
+
+```sql.
+mysqldump -u root -p mypass > esquema.sql
+```
 
 # Bases de datos para BigData
 La información venga de dónde venga debe de estar ordenada y debe ser util para generar operaciones con los datos.
