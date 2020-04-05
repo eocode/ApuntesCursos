@@ -1,4 +1,4 @@
-# Fundamentos de bases de datos<!-- omit in toc -->
+# SQL y MySQL<!-- omit in toc -->
 
 ## Tabla de Contenido<!-- omit in toc -->
 - [Introducción](#introducci%c3%b3n)

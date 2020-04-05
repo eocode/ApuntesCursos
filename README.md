@@ -12,6 +12,7 @@
 1. [Fundamentos de bases de datos](Fundamentos%20de%20Bases%20de%20Datos/README.md)
 2. [Curso de MongoDB y Redis](Curso%20de%20MongoDB%20y%20Redis/README.md#curso-de-mongodb-y-redis)
 3. [Curso de SQL y MySQL](Curso%20de%20SQL%20y%20MySQL/README.md)
+4. [Curso de PostgreSQL](Curso%20de%20PostgreSQL/README.md)
 
 ### Matemáticas
 1. [Curso de Fundamentos de Matemáticas](Curso%20de%20Fundamentos%20de%20Matemáticas/README.md)
