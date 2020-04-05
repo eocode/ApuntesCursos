@@ -56,6 +56,8 @@ Abrir SQL Shell (pgsql)
 Crear base de datos
 ``create database Transporte;``
 
+> No olvides el **;**
+
 Listar bases de datos
 `\l`
 
@@ -74,3 +76,14 @@ Ver tablas
 Describir una tabla
 ``\d viajero``
 
+Ver comandos de SQL que podemos hacer en la base de datos
+``\h``
+
+Version de Postgress
+``SELECT version();``
+
+Muestra lo que se está haciendo en la bd
+``\g``
+
+Activa el tiempo de ejecución de comandos
+``\timing``
