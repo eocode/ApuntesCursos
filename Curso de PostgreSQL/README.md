@@ -31,6 +31,7 @@
   - [Backup y restauración](#backup-y-restauraci%c3%b3n)
   - [Mantenimiento](#mantenimiento)
   - [Replicas (Solución al problema de lectura y escritura)](#replicas-soluci%c3%b3n-al-problema-de-lectura-y-escritura)
+    - [Implementación de replicas](#implementaci%c3%b3n-de-replicas)
 - [Proyecto de transporte masivo](#proyecto-de-transporte-masivo)
 
 # Introducción
@@ -713,6 +714,16 @@ Contar por lo menos con dos servidores un maestro y un esclavo
 
 * Una para lecturas (Esclavo)
 * Otra para cambios (Maestro)
+
+### Implementación de replicas
+
+Servicio en la nube
+https://cloudify.co/
+
+Se necesitan dos instancias de PgSQL y se configura en PgAdmin
+
+Modificación en Master
+Se modifica postgresql.conf
 
 
 # Proyecto de transporte masivo
