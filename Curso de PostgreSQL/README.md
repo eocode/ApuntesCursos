@@ -28,6 +28,9 @@
   - [Transacciones](#transacciones)
   - [Otras extensiones de PgSQL](#otras-extensiones-de-pgsql)
     - [Funciones para comparar texto](#funciones-para-comparar-texto)
+  - [Backup y restauración](#backup-y-restauraci%c3%b3n)
+  - [Mantenimiento](#mantenimiento)
+  - [Replicas (Solución al problema de lectura y escritura)](#replicas-soluci%c3%b3n-al-problema-de-lectura-y-escritura)
 - [Proyecto de transporte masivo](#proyecto-de-transporte-masivo)
 
 # Introducción
@@ -656,6 +659,61 @@ select soundex('beard'), soundex('bird');
 select levenshtein('beard','bird');
 select difference ('beard','bird');
 ```
+
+## Backup y restauración
+* PgDump
+* PgRestore
+  
+<div align="center">
+  <img src="images/10.png">
+  <small><p>Respaldo</p></small>
+</div>
+
+<div align="center">
+  <img src="images/11.png">
+  <small><p>Respaldo</p></small>
+</div>
+
+<div align="center">
+  <img src="images/12.png">
+  <small><p>Respaldo</p></small>
+</div>
+
+Para restaurar crear una base de datos nueva y ejecutar el asistente de restauración
+
+## Mantenimiento
+
+Postgres gestiona mantenimiento en segundo plano
+* Vacuum. Quita todas las filas columnas e items que no están funcionando
+
+Limpiado liviano (las hace constantemente) y completo donde bloquea las tablas para hacer la limpieza
+
+<div align="center">
+  <img src="images/13.png">
+  <small><p>Mantenimiento</p></small>
+</div>
+
+<div align="center">
+  <img src="images/14.png">
+  <small><p>Opciones de mantenimiento</p></small>
+</div>
+
+* Full. La tabla quedará limpia en su totalidad
+* Freeze. Durante el proceso la tabla se congela y no permite modificaciones hasta terminar la limpieza
+* Analyze. No hace cambios en la tabla. Sólo hace una revision y la muestra. No hace cambios en la tabla. Solo hace una revisión maestra
+* Reindex. Aplica para tablas con numerosos registros con indices como por ejemplo las llaves primarias
+* Cluster. Especificamos al motor de base de datos que reorganice la información en el disco
+ 
+## Replicas (Solución al problema de lectura y escritura)
+* Existen dos tipos de personas, los que ya usan replicas y los que las van a usar. Piensa siempre en modo replica
+
+Limites de física y electrónica, no pueden ser sobrepasados los recursos de tu servidor
+
+Contar por lo menos con dos servidores un maestro y un esclavo
+
+* Una para lecturas (Esclavo)
+* Otra para cambios (Maestro)
+
 
 # Proyecto de transporte masivo
 
