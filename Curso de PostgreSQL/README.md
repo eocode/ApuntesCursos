@@ -24,6 +24,10 @@
   - [Vistas](#vistas)
   - [PL/PgSQL](#plpgsql)
     - [Triggers o disparadores](#triggers-o-disparadores)
+  - [Obtener datos de Host remotos con DBLink](#obtener-datos-de-host-remotos-con-dblink)
+  - [Transacciones](#transacciones)
+  - [Otras extensiones de PgSQL](#otras-extensiones-de-pgsql)
+    - [Funciones para comparar texto](#funciones-para-comparar-texto)
 - [Proyecto de transporte masivo](#proyecto-de-transporte-masivo)
 
 # Introducción
@@ -594,6 +598,64 @@ INSERT INTO passengers(name, address, birthday) VALUES('Name trigger', 'DIr ACa'
 SELECT * FROM count_passengers;
 ```
 
+## Obtener datos de Host remotos con DBLink
+
+Puedes acceder a datos de otras bases de otros servidores usando DBLink
+
+```sql
+CREATE EXTENSION dblink;
+
+select * from passengers
+JOIN
+dblink('dbname=remote 
+		 port=5432 
+		 host=127.0.0.1 
+		 user=elias 
+		 password=qwerty',
+		 'SELECT id, date from vip_users') as remote_data(id integer, date date)
+USING (id);
+```
+
+## Transacciones
+Procesos complejos seguros
+
+```sql
+BEGIN;
+
+INSERT INTO trains(model, capacity)
+VALUES('Model Trans', 123);
+
+INSERT INTO stations(id, name, address)
+VALUES(108,'Station Transact', 'Address Transact');
+
+COMMIT;
+
+SELECT * FROM stations order by id desc
+SELECT * FROM trains order by id desc
+```
+
+## Otras extensiones de PgSQL
+
+Lista de todas las extensiones para PostgreSQL
+https://www.postgresql.org/docs/11/contrib.html
+
+### Funciones para comparar texto
+
+Letras que hay que cambiar para que coincida
+
+```sql
+CREATE EXTENSION fuzzystrmatch;
+
+select levenshtein('oswaldo','osvaldo');
+
+select difference ('oswaldo','osvaldo');
+
+select soundex('oswaldo'), soundex('osvaldo');
+
+select soundex('beard'), soundex('bird');
+select levenshtein('beard','bird');
+select difference ('beard','bird');
+```
 
 # Proyecto de transporte masivo
 
