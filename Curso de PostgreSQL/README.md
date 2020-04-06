@@ -22,6 +22,9 @@
     - [Principales](#principales)
     - [Avanzadas](#avanzadas)
   - [Vistas](#vistas)
+  - [PL/PgSQL](#plpgsql)
+    - [Triggers o disparadores](#triggers-o-disparadores)
+- [Proyecto de transporte masivo](#proyecto-de-transporte-masivo)
 
 # Introducción
 
@@ -455,3 +458,156 @@ REFRESH MATERIALIZED VIEW nightsview_mv;
 select * from nightsview_mv;
 ```
 
+## PL/PgSQL
+* Lenguaje de procedimientos almacenados
+
+Procedimientos almacenados
+
+```sql
+DO $$
+BEGIN
+	RAISE NOTICE 'Algo está pasando';
+END
+$$
+```
+
+```sql
+DO $$
+DECLARE
+	rec record;
+	contador integer := 0;
+BEGIN
+	FOR rec IN SELECT * FROM passengers LOOP
+		RAISE NOTICE 'Un pasajer se llama %', rec.name;
+		contador:= contador+1;
+	END LOOP;
+	RAISE NOTICE 'Conteo es %', contador;
+END
+$$
+```
+
+```sql
+CREATE FUNCTION mypl()
+	RETURNS void
+AS $$
+DECLARE
+	rec record;
+	contador integer := 0;
+BEGIN
+	FOR rec IN SELECT * FROM passengers LOOP
+		RAISE NOTICE 'Un pasajer se llama %', rec.name;
+		contador:= contador+1;
+	END LOOP;
+	RAISE NOTICE 'Conteo es %', contador;
+END
+$$
+LANGUAGE PLPGSQL;
+
+select mypl();
+```
+
+```sql
+DROP FUNCTION mypl;
+CREATE OR REPLACE FUNCTION mypl()
+	RETURNS integer
+AS $$
+DECLARE
+	rec record;
+	contador integer := 0;
+BEGIN
+	FOR rec IN SELECT * FROM passengers LOOP
+		RAISE NOTICE 'Un pasajer se llama %', rec.name;
+		contador:= contador+1;
+	END LOOP;
+	RAISE NOTICE 'Conteo es %', contador;
+	RETURN contador;
+END
+$$
+LANGUAGE PLPGSQL;
+
+select mypl();
+```
+
+```sql
+CREATE FUNCTION public.mypl()
+    RETURNS integer
+    LANGUAGE 'plpgsql'
+    
+    
+AS $BODY$
+DECLARE
+	rec record;
+	contador integer := 0;
+BEGIN
+	FOR rec IN SELECT * FROM passengers LOOP
+		RAISE NOTICE 'Un pasajer se llama %', rec.name;
+		contador:= contador+1;
+	END LOOP;
+	RAISE NOTICE 'Conteo es %', contador;
+	RETURN contador;
+END
+$BODY$;
+
+ALTER FUNCTION public.mypl()
+    OWNER TO postgres;
+```
+
+### Triggers o disparadores
+Son acciones que ocurren cuando ocurre algo
+* Insert
+* Update
+* Delete
+
+```sql
+-- FUNCTION: public.mypl()
+
+-- DROP FUNCTION public.mypl();
+
+CREATE OR REPLACE FUNCTION public.mypl(
+	)
+    RETURNS trigger
+    LANGUAGE 'plpgsql'    
+AS $BODY$
+DECLARE
+	rec record;
+	contador integer := 0;
+BEGIN
+	FOR rec IN SELECT * FROM passengers LOOP
+		RAISE NOTICE 'Un pasajer se llama %', rec.name;
+		contador:= contador+1;
+	END LOOP;
+	INSERT INTO count_passengers (total,time)
+	VALUES (contador, now());
+	-- RETURN OLD Para no hacer modificaciones
+	RETURN NEW;
+END
+$BODY$;
+
+CREATE TRIGGER mitrigger
+AFTER INSERT
+ON passengers
+FOR EACH ROW
+EXECUTE PROCEDURE mypl();
+
+INSERT INTO passengers(name, address, birthday) VALUES('Name trigger', 'DIr ACa', '2000-09-10')
+
+SELECT * FROM count_passengers;
+```
+
+
+# Proyecto de transporte masivo
+
+Base de datos para un sistema de transporte
+
+* Pasajero
+* Trayecto
+* Estación
+* Tren
+* Viaje
+
+<div align="center">
+  <img src="images/ER.png">
+  <small><p>Diagrama ER</p></small>
+</div>
+
+Código del proyecto en está carpeta
