@@ -9,17 +9,6 @@
 4. [Curso de Expresiones Regulares](Curso%20de%20Expresiones%20Regulares/README.md#Curso-de-Expresiones-Regulares) 
 5. [API REST](Curso%20de%20API%20Rest/README.md)
 
-### Base de Datos
-1. [Fundamentos de bases de datos](Fundamentos%20de%20Bases%20de%20Datos/README.md)
-2. [Curso de MongoDB y Redis](Curso%20de%20MongoDB%20y%20Redis/README.md#curso-de-mongodb-y-redis)
-3. [Curso de SQL y MySQL](Curso%20de%20SQL%20y%20MySQL/README.md)
-4. [Curso de PostgreSQL](Curso%20de%20PostgreSQL/README.md)
-
-### Matemáticas
-1. [Curso de Fundamentos de Matemáticas](Curso%20de%20Fundamentos%20de%20Matemáticas/README.md)
-2. [Curso de Algebra](Curso%20de%20Algebra/README.md)
-3. [Curso de Matemáticas Discretas](Curso%20de%20MD/README.md)
-
 ### NodeJS
 1. [Curso AdonisJS](Curso%20de%20AdonisJS/README.md#%20Curso%20de%20AdonisJS)
 2. [Curso de Gatsby](Curso%20de%20GatsbyJS/README.md#%20Curso%20de%20GatsbyJS)
